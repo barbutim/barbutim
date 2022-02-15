@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+.map{
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 5vh auto;
+	width: 640px;
+	clear:both;
+	border-radius: 0px;
+	max-width: 100%;
+	border: 2px solid black;
+}
+
+.properties{
+	max-width: 100%;
+	padding: 15px;
+	background-color: #296a82;
+	width: 610px;
+	margin : 5vh auto;
+	clear:both;
+	border-radius: 10px;
+	color:white;
+	font-size: 20px;
+	font-family: 'Open Sans';
+	list-style-type: none;
+	border: 2px solid black;
+}
+
+.properties ul{
+	max-width: 100%;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.properties li:hover{
+	background-color: #586b89;
+	transition: 100ms;
+	font-weight: 700;
+}
+
+.properties li{
+	padding: 8px;
+	transition: 100ms;
+	border-radius: 10px;
+}
+
+.attribute{
+	font-weight: 700;
+	padding-right: 10px;
+}
+
+.value{
+	margin-left: 50px;
+}
+
+.button{
+	margin: 10px auto;
+	transition: 200ms;
+	clear:both;
+	background-color: white;
+	color: #296a82;
+	width:100px;
+	padding: 8px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 300;
+}
+
+.button:hover{
+	transition: 200ms;
+	font-weight: 700;
+}
+
+.page-footer{
+	padding: 10px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+	padding: 20px;
+  clear: both;
+  margin: 0 auto 0;
+}
+@media (max-width: 750px) {
+.grid-container {
+	padding-top: 200px;
+	/*width: 590px;*/
+}
+.quote{
+	display: none;
+}
+.background{
+	width: 110%;
+}
+
+}
+@media (max-width: 640px) {
+	.grid-container{
+		width: 540px;
+	}
+	.background{
+		width: 120%;
+	}
+}
+@media (max-width: 580px) {
+	.grid-container{
+		width: 440px;
+	}
+	.background{
+		width: 140%;
+	}
+}
+@media (max-width: 510px) {
+	.grid-container{
+		width: 330px;
+	}
+	.background{
+		width: 170%;
+	}
+}
+@media (max-width: 440px) {
+	.grid-container{
+		width: 240px;
+	}
+	.background{
+		width: 200%;
+	}
+}
+@media (max-width: 400px) {
+	.grid-container{
+		width: 220px;
+	}
+	.background{
+		width: 220%;
+	}
+}
+@media (max-width: 350px) {
+	.grid-container{
+		width: 200px;
+	}
+	.background{
+		width: 240%;
+	}
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+
+.container{
+	display: grid;
+	grid-template-rows: auto auto auto;
+	column-count: 2;
+	background-color: #296a82;
+	width: 610px;
+	margin : 0 auto;
+	border-radius: 10px;
+	max-width: 100%;
+	border: 2px solid black;
+
+}
+
+.properties ul{
+	list-style-type: none;
+	padding: 2px;
+}
+
+.properties li{
+	color:white;
+	font-size: 20px;
+	font-family: 'Open Sans';
+	list-style-type: none;
+	padding: 2px;
+	transition: 100ms;
+	border-radius: 10px;
+}
+
+.attribute{
+	font-weight: 700;
+}
+
+.value{
+	margin-left: 30px;
+}
+
+.button{
+	position: static;
+	margin-right: 0;
+	margin-left: 0;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 20px auto;
+	transition: 200ms;
+	clear:both;
+	background-color: white;
+	color: #296a82;
+	width:150px;
+	padding: 8px;
+	border-radius: 10px;
+	text-align: center;
+	font-weight: 300;
+	position: static;
+}
+
+.button:hover{
+	transition: 200ms;
+	font-weight: 700;
+}
+
+.hotel-name{
+	color: white;
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
+	padding-top: 20px;
+	margin: 0 0 0 0;
+}
+
+.responsive{
+	width: 100%;
+  height: 200px;
+	object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	border-bottom: 2px solid black;
+}
+
+.page-footer{
+	padding: 10px;
+}
+
+.grid-container {
+	padding: 20px;
+  clear: both;
+  margin: 0 auto 0;
+}
+
+@media (max-width: 750px) {
+.grid-container {
+	padding-top: 200px;
+}
+.quote{
+	display: none;
+}
+}

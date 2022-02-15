@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700');
+
+body{
+	margin-right: 10px;
+	margin-right: 10px;
+
+}
+
+
+.fotka{
+	border: 2px solid black;
+	width: 250px;
+	height: 250px;
+	margin: 13vh auto 0;
+	clear: both;
+	display: block;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.personaN{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 700;
+	color: #44536b;
+	margin-bottom: -18px;
+
+}
+
+.personan{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	color: #888;
+}
+
+
+.persona{
+	text-align: justify;
+	margin: 10px 10vw 0 10vw;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 50px;
+}
+
+table {
+	font-family: arial, sans-serif;
+  width: 50%;
+	margin-top: 30px;
+  border-collapse: collapse;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+}
+
+td{
+  text-align: center;
+  padding: 5px;
+}
+
+th{
+  	color: #ffffff;
+	text-align: center;
+	padding: 5px;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+.page-footer{
+	padding: 10px;
+}
+
+@media (max-width: 750px) {
+.grid-container {
+	padding-top: 200px;
+}
+.quote{
+	display: none;
+}
+}
