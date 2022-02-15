@@ -1,0 +1,35 @@
+# ACTS Test Suite Generation: Wed May 19 01:01:26 CEST 2021
+#  '*' represents don't care value 
+# Degree of interaction coverage: 2
+# Number of parameters: 3
+# Maximum number of values per parameter: 2
+# Number of configurations: 28
+allyColor,board,kingCoordinates
+WHITE,[8][8],[0][0]
+WHITE,[8][8],[7][0]
+BLACK,[8][8],[0][0]
+BLACK,[8][8],[7][0]
+BLACK,[7][8],[0][0]
+WHITE,[9][8],[0][0]
+BLACK,nullType,[0][0]
+WHITE,typeError,[0][0]
+WHITE,[7][8],[7][0]
+BLACK,[9][8],[7][0]
+WHITE,nullType,[7][0]
+BLACK,typeError,[7][0]
+WHITE,[8][8],[-1][0]
+BLACK,[8][8],[8][0]
+WHITE,[8][8],wrongFigure
+BLACK,[8][8],nullType
+WHITE,[8][8],typeError
+NONE,[8][8],[0][0]
+nullType,[8][8],[0][0]
+typeError,[8][8],[0][0]
+WHITE,[8][8],[8][0]
+WHITE,[8][8],nullType
+BLACK,[8][8],[-1][0]
+BLACK,[8][8],wrongFigure
+BLACK,[8][8],typeError
+NONE,[8][8],[7][0]
+nullType,[8][8],[7][0]
+typeError,[8][8],[7][0]
