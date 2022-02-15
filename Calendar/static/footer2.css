@@ -1,0 +1,33 @@
+footer{
+    text-align: center;
+    background-color: #bb9143;
+    padding-bottom: 2rem;
+    bottom: 0;
+    display: flex;
+    border-top: 1px solid #3e1b18;
+    margin-top: 5%;
+    font-family: "Lucida Console";
+    position: fixed;
+    width: 100%;
+}
+footer p{
+    font-style: italic;
+    padding: 1rem 0 0 10%;
+    margin-bottom: -1rem;
+    color: #3e1b18;
+}
+@media (min-height: 1000px){
+    footer{
+        margin-top: 30%;
+    }
+}
+@media (min-height: 1200px){
+    footer{
+        margin-top: 50%;
+    }
+}
+@media print{
+    footer{
+        display: none;
+    }
+}

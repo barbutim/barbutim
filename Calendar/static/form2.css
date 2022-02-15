@@ -1,0 +1,145 @@
+body{
+    background: #3e1b18;
+    color: #fbefc3;
+    font-family: "Lucida Console";
+}
+html{
+    height: 100%;
+}
+article{
+    text-align: center;
+    min-height: 100%;
+}
+article form{
+    margin-top: 50px;
+    background: #bb9143;
+    width: 25rem;
+    height: 50rem;
+    left: 50%;
+    bottom: 0;
+    position: relative;
+    transform: translate(-50%,0%);
+    box-sizing: border-box;
+}
+article form h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    background: #3e1b18;
+    padding: 0 5.1rem 0 5rem;
+    border-bottom: 1px solid #fbefc3;
+    white-space:nowrap;
+}
+form p{
+    color: #fbefc3;
+    text-decoration: none;
+    padding-top: 3rem;
+}
+form p a{
+    color: #fbefc3;
+    text-decoration: none;
+}
+.warning{
+    color: #3e1b18;
+}
+.req{
+    padding-right: 3.6rem;
+    margin-top: 2rem;
+    float: right;
+}
+.test{
+    margin-left: -7rem;
+    margin-top: 1rem;
+}
+label .state{
+    float: left;
+    padding: 0 0 0.5rem 4rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+label .state:nth-child(1){
+    padding-top: 1rem;
+}
+label input, label textarea{
+    color: #fbefc3;
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid #3e1b18;
+    background: transparent;
+    padding: 0.3rem;
+    height: 1.5rem;
+    outline: none;
+}
+label textarea{
+    border: 2px solid #3e1b18;
+    height: 5rem;
+    resize: none;
+}
+::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+    cursor: pointer;
+}
+.sendButton{
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: #fbefc3;
+    background-color: #3e1b18;
+    text-align: center;
+    transition: all 0.3s;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.sendButton:hover{
+    background-color: #31110e;
+}
+.error {
+    color: #3e1b18;
+}
+.error::after {
+    align-items: center;
+    white-space: nowrap;
+}
+.dateErr::after {
+    content: 'Zle zadaný dátum!';
+    float: right;
+    margin: 0.5rem 7rem -1.5rem 0;
+}
+.timeErr::after {
+    content: 'Zle zadaný čas!';
+    float: right;
+    margin: 0.5rem 7.8rem -1.5rem 0;
+}
+.titleErr::after {
+    content: 'Názov musí obsahovať 5-30 znakov!';
+    float: right;
+    margin: 0.5rem 2.5rem -1.5rem 0;
+}
+.textErr::after {
+    content: 'Text môže obsahovať maximum 150 znakov!';
+    float: right;
+    margin: 0.5rem 0.7rem -1.5rem 0;
+}
+.nameErr::after {
+    content: 'Meno musí obsahovať 5-30 znakov!';
+    float: right;
+    margin: 0.5rem 2.5rem -1.5rem 0;
+}
+.passwordErr::after {
+    content: 'Heslo musí obsahovať 5-30 znakov!';
+    float: right;
+    margin: 0.5rem 2.3rem -1.5rem 0;
+}
+@media (max-width: 400px){
+    header{
+        width: 150%;
+    }
+    article form{
+        left: 75%;
+    }
+}

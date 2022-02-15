@@ -1,0 +1,404 @@
+html{
+  height: 100%;
+  background-color: #3e1b18;
+  font-family: "Quicksand", sans-serif;
+}
+article .calendar{
+  border: 10px solid #3e1b18;
+  width: 45.2rem;
+  height: 150%;
+  background-color: #bb9143;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  color: #fbefc3;
+  float: right;
+  box-sizing: border-box;
+}
+article .calendar .top{
+  width: 100%;
+  height: 12rem;
+  background-color: #3e1b18;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+article .calendar .top .previousMonth:hover, article .calendar .top .nextMonth:hover{
+  cursor: pointer;
+}
+article .calendar .top .currentDate{
+  font-style: italic;
+  font-size: 2rem;
+}
+article .calendar .top .currentDate h2{
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+article .calendar .daysInaWeek{
+  list-style-type: none;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+}
+article .calendar .daysInaWeek a{
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  justify-content: center;
+  align-items: center;
+  width: calc(44.2rem / 7);
+  display: flex;
+}
+article .calendar .numberOfDays{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+article .calendar .numberOfDays a{
+  font-size: 1.4rem;
+  margin: 0.296rem;
+  width: calc(39.4rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+  border-radius: 2em;
+}
+article .calendar .numberOfDays a:hover{
+  cursor: pointer;
+  background-color: #3e1b18;
+  border: 0.2rem solid #3e1b18;
+}
+article .calendar .numberOfDays .extraDays{
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+article .calendar .numberOfDays .todaysDay{
+  background-color: #3e1b18;
+}
+article .calendar .createButton{
+  height: 20rem;
+}
+article .calendar .createButton .button{
+  display:inline-block;
+  padding:1.5em 3em;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  color:#bb9143;
+  background-color: #3e1b18;
+  text-align:center;
+  transition: all 0.2s;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin: 1rem 0 0 35%;
+}
+article .calendar .createButton .button:hover{
+  color: #fbefc3;
+}
+article .notes{
+  width: calc(100% - 45.2rem);
+  float: left;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1.5rem;
+}
+article .notes nav ul .noteAdd{
+  list-style-type: none;
+  position: relative;
+}
+article .notes nav ul .noteAdd a{
+  background: #3e1b18;
+  width: 100%;
+  border-top: 1px solid #fbefc3;
+  display: flex;
+  padding: 0.5rem;
+  height: 5rem;
+}
+article .notes nav ul .noteAdd:last-of-type{
+  border-bottom: 1px solid #fbefc3;
+}
+article .notes nav ul .noteAdd a:hover{
+  background: #bb9143;
+  cursor: pointer;
+}
+article .notes nav ul .noteAdd .time{
+  color:#fbefc3;
+  font-weight: 600;
+  font-size: 12px;
+  float: left;
+  width: 8rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem 0.2rem 0 0;
+  margin-bottom: -1rem;
+}
+article .notes nav ul .noteAdd .title{
+  width: 95%;
+  font-weight: 600;
+  color: #fbefc3;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1.5rem 0.2rem 0 0;
+  text-transform: capitalize;
+}
+article .notes nav ul .noteAdd form .noteButton{
+  border-radius: 1em;
+  text-decoration:none;
+  color:#3e1b18;
+  text-align:center;
+  transition: all 0.2s;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  right: 3%;
+  top: 0;
+  cursor: pointer;
+  background-color: #3e1b18;
+  border: none;
+}
+article .notes nav ul .noteAdd form .del{
+  padding:0.7em 0.6em;
+  top: 12%;
+}
+article .notes nav ul .noteAdd:hover form .del{
+  background: #920000;
+  transition: 0.7s ease-out;
+  color: white;
+}
+article .notes nav ul .noteAdd form .upd{
+  padding:0.7em 0.8em;
+  top: 60%;
+}
+article .notes nav ul .noteAdd:hover form .upd{
+  background: #207300;
+  transition: 0.7s ease-out;
+  color: white;
+}
+article .notes nav ul .noteAdd form .noteButton:hover{
+  background-color: #3e1b18;
+}
+.popup {
+	background-color: #bb9143;
+	width: 50%;
+	height: 30%;
+  position: absolute;
+  z-index: 1000;
+  top: 30%;
+  left: 25%;
+	display: none;
+	justify-content: center;
+  align-items: center;
+  border: 2px solid #fbefc3;
+}
+.note{
+  font-family: "Lucida Console";
+  color: #fbefc3;
+  font-weight: 600;
+  margin-left: -25%;
+}
+.show {
+	margin-left: -25%;
+  margin-top: 1rem;
+  color: #fbefc3;
+  width: 150%;
+  background: transparent;
+  padding: 0.3rem;
+  outline: none;
+  border: 2px solid #3e1b18;
+  height: 5rem;
+  resize: none;
+}
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #fbefc3;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.invisible{
+  display: none;
+}
+.leftArrow{
+  color: #fbefc3;
+  text-decoration: none;
+}
+.rightArrow{
+  color: #fbefc3;
+  text-decoration: none;
+}
+.betweenArrow{
+  color: #fbefc3;
+  text-decoration: none;
+}
+.pages{
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 2rem;
+}
+.dbError{
+  color: #fbefc3;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 3rem;
+  list-style-type: none;
+  border-bottom: 1px solid #fbefc3;
+}
+.number{
+  border-top: 1px solid #fbefc3;
+  list-style-type: none;
+}
+@media (min-width: 1600px){
+  .show{
+    width: 200%;
+    margin-left: -50%;
+  }
+  .textPopup{
+    margin-left: -25%;
+  }
+}
+@media (max-width: 1250px){
+  article .calendar{
+    width: calc(45.2rem / 2);
+  }
+  article .calendar .top{
+    height: 6rem;
+  }
+  article .calendar .top .currentDate{
+    font-size: 1rem;
+  }
+  article .calendar .top .currentDate h2{
+    font-size: 1rem;
+  }
+  article .calendar .numberOfDays{
+    margin-top: -3rem;
+  }
+  article .calendar .daysInaWeek a{
+    font-size: 1rem;
+    height: 2rem;
+  }
+  article .calendar .numberOfDays a{
+    font-size: 0.7rem;
+    width: calc(39.4rem / 7 / 2.35);
+    height: 2rem;
+  }
+  article .calendar .numberOfDays .extraDays{
+    font-size: 0.7rem;
+  }
+  article .calendar .top .previousMonth, article .calendar .top .nextMonth{
+    font-size: 0.7rem;
+  }
+  article .calendar .createButton .button{
+    padding:0.5em 1em;
+    font-size: 0.8rem;
+  }
+  article .notes{
+    width: calc(100% - (45.2rem/2));
+  }
+  .popup {
+    width: 60%;
+    height: 30%;
+    top: 30%;
+    left: 20%;
+  }
+}
+@media (max-width: 880px){
+  article .calendar{
+    width: calc(45.2rem / 4);
+  }
+  article .calendar .top{
+    height: 3rem;
+  }
+  article .calendar .top .currentDate{
+    font-size: 0.2rem;
+  }
+  article .calendar .top .currentDate h2{
+    font-size: 0.2rem;
+  }
+  article .calendar .numberOfDays{
+    margin-top: -4rem;
+  }
+  article .calendar .daysInaWeek a{
+    font-size: 0.3rem;
+    height: 1rem;
+  }
+  article .calendar .numberOfDays a{
+    font-size: 0.3rem;
+    width: calc(39.4rem / 7 / 7.2);
+    height: 0.8rem;
+  }
+  article .calendar .numberOfDays .extraDays{
+    font-size: 0.3rem;
+  }
+  article .calendar .top .previousMonth, article .calendar .top .nextMonth{
+    font-size: 0.4rem;
+  }
+  article .calendar .createButton .button{
+    padding:0.5em 1em;
+    margin-left: 2.8rem;
+    font-size: 0.3rem;
+  }
+  article .notes{
+    width: calc(100% - (45.2rem/4));
+  }
+  article .notes nav ul .noteAdd .time{
+    font-size: 5px;
+    padding: 0rem 0.2rem 0 0;
+  }
+  article .notes nav ul .noteAdd .timeStamp{
+    padding: 0.6rem 0.2rem 0 0;
+  }
+  article .notes nav ul .noteAdd .title{
+    padding: 0.3rem 0rem 0 0;
+    font-size: 5px;
+  }
+  article .notes{
+    padding: 0.5rem;
+  }
+  article .notes nav ul .noteAdd a {
+    height: 2rem;
+  }
+  article .notes nav ul .noteAdd form .noteButton{
+    font-size: 0.2rem;
+  }
+  article .notes nav ul .noteAdd form .del{
+    padding:0.2em 0.1em;
+  }
+  article .notes nav ul .noteAdd form .upd{
+    padding:0.2em 0.3em;
+  }
+  .popup {
+    width: 90%;
+    height: 30%;
+    top: 30%;
+    left: 5%;
+    font-size: 12px;
+  }
+  .show{
+    width: 150%;
+  }
+  .textPopup{
+    display: none;
+  }
+  .pages{
+    padding-top: 1rem;
+    font-size: 1rem;
+  }
+  .dbError{
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+}
