@@ -1,0 +1,13 @@
+Autoškola:
+
+Človek musí byť buď študentom alebo učiteľom, pričom ale nemôže byť obe zároveň - complete, exclusive.
+Študent môže mať nepovinný údaj: e-mail, ale nemusí mať (kardinalita 0..1).
+Učiteľ musí mať uvedený aspoň jeden e-mail, poprípade viacero (kardinalita 1..N).
+Študent sa môže prihlásiť na viacero hodín teórie, pričom na teórií je taktiež viacero študentov (kardinalita 0..N).
+Na teórií vyučovanej v autoškole musí byť minimálne jeden učiteľ, pričom ich ale môže byť viac. Každý učiteľ ale nemusí nutne vyučovať teóriu (niektorý môžu mať iba jazdy).
+Teória je jednoznačne identifikovaná pomocou dátumu a času. Narozdiel od normálnej školy, sa v autoškole v 95% prípadoch vyskytuje iba jedna učebňa.
+Ternárny vzťah študent-učiteľ-jazda, spojuje jedného učiteľa a jedného žiaka, ktorý budú mať spolu jazdu. Učiteľ aj študent môžu mať pritom zapísaných viacero jázd.
+Jazda je jednoznačne identifikovaná opäť pomocou dátumu a času, ale tentokrát aj pomocou auta. 
+V tomto prípade sa v rovnaký dátum a čas môže vykonávať viacero jázd na rôznych autách (narozdiel od teórie, kde sa v rovnaký dátum a čas môže vykonávať iba jedna teória).
+K jazde je priradené buď žiadne alebo maximálne jedno auto (kardinalita 0..1), pretože k jazdám sa často prihlasuje týždne dopredu, avšak auto je známe iba pár dní dopredu.
+Jedno auto môže byť samozrejme prítomné na rôznom počte jázd (kardinalita 0..N).
