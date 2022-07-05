@@ -1,0 +1,7 @@
+.modalButton {
+    cursor: pointer;
+}
+
+.modalButton:hover {
+    color: #bada55;
+}
