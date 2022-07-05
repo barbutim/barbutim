@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Note_block</title>
+</head>
+<body>
+    <!-- Notepad: main element of the whole project -->
+    <section class="notepad">
+        <!-- Header: header of notepad, contains title and input for adding new notes -->
+        <header class="entry">
+            <img class="header_image" src="forest.jfif" alt="header_image_forest">
+            <h1 class="title">Notes</h1>
+            <div class="input">
+                <input id="add_checkbox" type="checkbox" class="solved_note">
+                <input id="add_text" class="new_note" placeholder="Enter your wishes here..." autofocus required>
+                <button id="add_button" class="add_button">
+                    <span class="add_label"></span>
+                </button>
+            </div>
+        </header>
+        <!-- Notes: JS generates notes into this ul element -->
+        <div class="block">
+            <img class="block_image" src="background.jpg" alt="block_image_background">
+            <ul class="note_list"></ul>
+        </div>
+        <!-- Footer: JS updates these values automatically -->
+        <footer class="info">
+            <span class="date"></span>
+            <span class="notes_number"></span>
+        </footer>
+    </section>
+    <!-- Note detail: small hidden window with note details, which appears when user clicks on the note -->
+    <section class="detail">
+        <!-- Header: contains title and button for closing this note detail -->
+        <header class="title_detail">
+            <h2 class="title">Note detail:</h2>
+            <button class="hide_button" id="hide_button">
+                <img class="hide_image" src="remove.png" alt="hide_image_remove">
+            </button>
+        </header>
+        <!-- Note: shows information of the chosen note -->
+        <div class="detail_block">
+            <img class="detail_image" src="detail_background.jpg" alt="detail_image_background">
+            <ul class="detail_info">
+                <li class="current_detail">
+                    <p class="detail_checked"></p>
+                </li>
+                <li class="current_detail">
+                    <p class="detail_message"></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- SVG: hidden smile that appears when user opens detail of note and then deletes the same one -->
+    <svg class="smile" viewbox="0 0 200 200">
+        <circle class="smile_background" cx="100" cy="100" r="20"></circle>
+        <circle class="smile_eye" cx="90" cy="90" fill="black" r="1"></circle>
+        <circle class="smile_eye" cx="110" cy="90" fill="black" r="1"></circle>
+        <path d="M 90 110 Q 100 120 110 110"
+              class="smile_mouth"
+              fill="none"
+              stroke="black"
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+        ></path>
+    </svg>
+    <script src="script.js"></script>
+</body>
+</html>

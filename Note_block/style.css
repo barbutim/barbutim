@@ -1,0 +1,406 @@
+/* Color pallet:
+background: rgb(75, 65, 65);
+black-text: rbg(55, 55, 55);
+blue: rgb(13, 34, 116);
+lightblue: rgb(36, 54, 135);
+white: rgb(199, 206, 216);
+black: rgb(29, 35, 46);
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 65, 65);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notepad {
+    position: absolute;
+    left: 25vw;
+    top: 50px;
+    width: 50vw;
+    min-height: 200px;
+    border: 3.5px solid rgb(29, 35, 46);
+    border-radius: 1%;
+    box-shadow: 0px 0px 8px 5px rgb(29, 35, 46);
+}
+.notepad .entry {
+    position: relative;
+    height: 200px;
+    border-bottom: 3px solid rgb(29, 35, 46);
+}
+.notepad .entry .header_image {
+    position: absolute;
+    left: 0;
+    width: 50vw;
+    height: 200px;
+    border-radius: 1%;
+}
+.notepad .entry .title {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 50vw;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    background-color: rgb(13, 34, 116);
+    color: rgb(242, 234, 234);
+    text-align: center;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    opacity: 0.75;
+}
+.notepad .entry .input {
+    display: flex;
+    position: absolute;
+    top: 158px;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(13, 34, 116);
+    border-top: 3px solid rgb(29, 35, 46);
+    border-bottom: 3px solid rgb(29, 35, 46);
+}
+.notepad .entry .input .solved_note {
+    appearance: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+    margin: 5px;
+    background-color: rgb(199, 206, 216);
+    border-radius: 20%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+
+}
+.notepad .entry .input .solved_note::after {
+    display: none;
+    content: '\2713';
+    margin-top: -18px;
+    margin-left: -9px;
+    color: rgb(29, 35, 46);
+    font-size: 25px;
+    font-weight: 800;
+}
+.notepad .entry .input .solved_note:hover {
+    background-color: white;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .entry .input .solved_note:checked::after {
+    display: block;
+}
+.notepad .entry .input .new_note {
+    width: 100%;
+    height: 36px;
+    padding: 0 0 0 10px;
+    background-color: rgb(36, 54, 135);
+    color: rgb(199, 206, 216);
+    border: 2px solid rgb(29, 35, 46);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.notepad .entry .input .new_note:hover {
+    background-color: rgb(199, 206, 216);
+    color: rgb(29, 35, 46);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .entry .input .new_note:hover::placeholder {
+    color: rgb(29, 35, 46);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .entry .input ::placeholder {
+    color: rgb(199, 206, 216);
+}
+.notepad .entry .input .add_button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: rgb(13, 34, 116);
+    font-size: 33px;
+}
+.notepad .entry .input .add_button .add_label {
+    position: absolute;
+    cursor: pointer;
+    left: 0px;
+    top: 2px;
+    width: 40px;
+    color: rgb(199, 206, 216);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.notepad .entry .input .add_button .add_label:hover {
+    left: -1px;
+    color: white;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    -o-transform: scale(1.1) rotateZ(90deg);
+    -ms-transform: scale(1.1) rotateZ(90deg);
+    -moz-transform: scale(1.1) rotateZ(90deg);
+    transform: scale(1.1) rotateZ(90deg);
+}
+.notepad .entry .input .add_button .add_label:after {
+    content: '\25B6';
+}
+.notepad .block {
+    position: relative;
+}
+.notepad .block .block_image {
+    position: absolute;
+    width: 50vw;
+    height: 200px;
+}
+.notepad .block .note_list {
+    padding: 0;
+    margin-top: 1px;
+}
+.notepad .block .note_list .current_note {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+}
+.notepad .block .note_list .current_note .active_note {
+    appearance: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin: 8px 5px 5px 5px;
+    padding: 15px;
+    background-color: rgb(29, 35, 46);
+    border-radius: 50%;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.notepad .block .note_list .current_note .active_note:after {
+    display: none;
+    content: '\2713';
+    margin-top: -18px;
+    margin-left: -9px;
+    color: rgb(199, 206, 216);
+    font-size: 25px;
+    font-weight: 800;
+}
+.notepad .block .note_list .current_note .active_note:hover {
+    background-color: rgb(108, 119, 139);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .block .note_list .current_note .active_note:hover ~ .note_field .note {
+    color: rgb(108, 119, 139);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .block .note_list .current_note .active_note:hover ~ .remove_button .remove_image {
+    filter: brightness(2);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.notepad .block .note_list .current_note .active_note:checked::after {
+    display: block;
+}
+.notepad .block .note_list .current_note .active_note:checked {
+    background-color: rgb(108, 119, 139);
+}
+.notepad .block .note_list .current_note .active_note:checked ~ .note_field .note {
+    color: rgb(108, 119, 139);
+}
+.notepad .block .note_list .current_note .active_note:checked ~ .remove_button .remove_image {
+    filter: brightness(2);
+}
+.notepad .block .note_list .current_note .note_field {
+    width: 100%;
+    margin: 0 25px 0 25px;
+    padding: 15px;
+    border-bottom: 1.5px solid rgb(199, 206, 216);
+}
+.notepad .block .note_list .current_note .note_field .note {
+    text-align: left;
+    font-weight: 600;
+    color: rgb(55, 55, 55);
+    cursor: pointer;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.notepad .block .note_list .current_note .remove_button {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+}
+.notepad .block .note_list .current_note .remove_button .remove_image {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.notepad .block .note_list .current_note .remove_button .remove_image:hover {
+    filter: grayscale(100%) sepia(100%) hue-rotate(-50deg) saturate(600%);
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform: scale(1.2) rotate(1turn);
+    -o-transform: scale(1.2) rotate(1turn);
+    -ms-transform: scale(1.2) rotate(1turn);
+    -moz-transform: scale(1.2) rotate(1turn);
+    transform: scale(1.2) rotate(1turn);
+}
+.notepad .info {
+    position: relative;
+    margin-top: -16px;
+    padding-top: 2px;
+    background-color: rgb(13, 34, 116);
+    color: rgb(199, 206, 216);
+    border-top: 2px solid rgb(29, 35, 46);
+}
+.notepad .info .date {
+    padding-left: 50px;
+}
+.notepad .info .notes_number {
+    position: absolute;
+    right: 50px;
+}
+.detail {
+    display: none;
+    position: relative;
+    top: 150px;
+    left: 30vw;
+    width: 40.2vw;
+    height: 200px;
+    background: rgb(199, 206, 216);
+    border: 4px solid rgb(29, 35, 46);
+    border-radius: 1%;
+    box-shadow: 0px 0px 8px 5px rgb(29, 35, 46);
+}
+.detail .title_detail {
+    border-bottom: 2px solid rgb(199, 206, 216);
+    background: rgb(36, 54, 135);
+    padding: 10px;
+    height: 27px;
+}
+.detail .title_detail .title {
+    margin: 0;
+    text-align: center;
+    color: rgb(199, 206, 216);
+}
+.detail .title_detail .hide_button {
+    position: relative;
+    left: 36vw;
+    bottom: 2.75vw;
+    appearance: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.detail .title_detail .hide_button .hide_image {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+.detail .detail_block {
+    position: relative;
+}
+.detail .detail_block .detail_image {
+    position: absolute;
+    height: 150px;
+    width: 40.2vw;
+    margin-top: -15px;
+}
+.detail .detail_block .detail_info {
+
+}
+.detail .detail_block .detail_info .current_detail {
+    color: rgb(199, 206, 216);
+    position: relative;
+    display: flex;
+    list-style-type: none;
+}
+.smile {
+    display: none;
+    position: absolute;
+    top: -500px;
+}
+.smile .smile_background {
+    -webkit-animation: smile_background_animation 1.5s linear;
+    -o-animation: smile_background_animation 1.5s linear;
+    -ms-animation: smile_background_animation 1.5s linear;
+    -moz-animation: smile_background_animation 1.5s linear;
+    animation: smile_background_animation 1.5s linear;
+}
+.smile .smile_eye {
+    -webkit-animation: smile_eye_animation 1.5s linear;
+    -o-animation: smile_eye_animation 1.5s linear;
+    -ms-animation: smile_eye_animation 1.5s linear;
+    -moz-animation: smile_eye_animation 1.5s linear;
+    animation: smile_eye_animation 1.5s linear;
+}
+.smile .smile_mouth {
+    -webkit-animation: smile_mouth_animation 1.5s linear;
+    -o-animation: smile_mouth_animation 1.5s linear;
+    -ms-animation: smile_mouth_animation 1.5s linear;
+    -moz-animation: smile_mouth_animation 1.5s linear;
+    animation: smile_mouth_animation 1.5s linear;
+}
+@keyframes smile_background_animation {
+    0% { fill: rgb(230, 180, 0); r: 20}
+    80%, 100% { fill: rgb(200, 0, 0); r: 23}
+}
+@keyframes smile_eye_animation {
+    0% { r: 1}
+    80%, 100% { r: 3}
+}
+@keyframes smile_mouth_animation {
+    0% { d: path("M 90 110 Q 100 120 110 110")}
+    80%, 100% { d: path("M 90 110 Q 100 100 110 110")}
+}
