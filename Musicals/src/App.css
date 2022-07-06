@@ -1,0 +1,229 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.product-wrapper {
+    display: block;
+    width: 100%;
+    float: left;
+    transition: width .2s;
+    border-color: #282c34;
+    border-style: groove;
+}
+
+@media only screen and (min-width: 450px) {
+    .product-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-wrapper {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-wrapper {
+        width: 15%;
+    }
+}
+
+.products {
+    list-style: none;
+    margin: 0 -20px 0 0;
+    padding: 0;
+}
+
+.mainHomeContainer {
+    display: flex;
+    background-color: black;
+    min-height: 100vh;
+}
+
+.container-for-search-items {
+    width: 20%;
+    background: #ccc;
+    float: left;
+}
+
+.container-for-cards-view {
+    float: right;
+}
+
+.product-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-photo img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    transition: transform .4s ease-out;
+    border-radius: 10px;
+}
+
+.home__card__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.home__card {
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+.home__card img {
+    min-width: 100%;
+}
+
+.row a {
+    text-decoration: none;
+    color: white;
+    padding-top: 0.5em;
+    transition: background-color 0.4s ease-out;
+    font-size: 13pt;
+    border-radius: 10px;
+    font-weight: 350;
+}
+
+.row a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.fa-button {
+    z-index: 10;
+    left: 0;
+}
+
+.musical__card {
+    background-color: #ffa69e;
+    background-image: linear-gradient(135deg, #ffa69e 0%, #5d4954 74%);
+    padding-top: 1em;
+    color: lightcyan;
+}
+
+.musical__title img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.musical__title>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+
+.musical__buy {
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    text-align: left;
+}
+
+.musical__buy p {
+    font-size: 1.3em;
+}
+
+.musical__buy button {
+    font-size: 1.3em;
+    padding: 0.5em 1em;
+    font-weight: 550;
+}
+
+.musical__description {
+    text-align: justify;
+    text-indent: 1em;
+    margin-bottom: 4em;
+}
+
+.musical__header{
+    margin-bottom: 4em;
+}
+
+.musical__description p {
+    font-size: 1.1em;
+}
+
+.musical__date,
+.musical__presented {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.home__card__icon{
+    margin: 0;
+}
+
+.musical__backButton{
+    top: 16px;
+    left: 16px;
+    z-index: inf;
+}
+
+.main-search {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+
+.homeLoading {
+    color: white;
+}
